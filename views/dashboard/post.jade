@@ -1,0 +1,26 @@
+extends base
+
+block vars
+  - var title = 'New Post'
+
+block body
+  h1 New Post
+
+  if error
+    p ERROR: #{error}
+
+  form(method="post")
+    input(type="hidden", name="_csrf", value=csrfToken)
+
+    span title:
+    input(type="text", name="title", required=true)
+    br
+
+    span url:
+    input(type="text", name="name", required=true)
+    br
+
+    span text:
+    input(type="text", name="text", required=true)
+    br
+    input(type="submit")

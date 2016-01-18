@@ -9,7 +9,11 @@ block body
     Welcome to your dashboard! You are now logged in.
 
   h2 User Information
+  p Username: #{user.username}
   p First Name: #{user.firstName}
   p Last Name:  #{user.lastName}
   p Email:      #{user.email}
   p Data:       #{user.data}
+  
+  br
+  h1 <a href="/dashboard/post">New Post</a>

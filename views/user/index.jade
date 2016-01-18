@@ -1,0 +1,55 @@
+include ./vars.jade
+doctype html
+html
+	include ./includes/head.jade
+	body
+		include ./includes/navbar.jade
+
+		.container
+			.row.first-row
+				.col-md-6.col-padless
+					#home-carousel.carousel.slide
+						ol.carousel-indicators
+							li.active(data-target="#home-carousel", data-slide-to="0")
+							li(data-target="#home-carousel", data-slide-to="1")
+							li(data-target="#home-carousel", data-slide-to="2")
+						.carousel-inner
+							.item.active
+								img(src="https://coubsecure-a.akamaihd.net/get/b137/p/coub/simple/cw_timeline_pic/e7a407a9da3/bf260987063bcda62aa36/big_1445526891_image.jpg", alt="")
+							.item
+								img(src="http://assets2.ignimgs.com/2013/10/25/deadpool-1280jpg-e95d59_1280w.jpg", alt="")
+							.item
+								img(src="http://static1.squarespace.com/static/51b3dc8ee4b051b96ceb10de/t/562fb744e4b001db2349f03c/1445967685623/?format=1500w", alt="")
+						a.left.carousel-control(href="#home-carousel", data-slide="prev")
+							span.icon-prev
+						a.right.carousel-control(href="#home-carousel", data-slide="next")
+							span.icon-next
+				.col-md-6.col-padless
+					#home-description
+						h1.text-center Welcome to DSG Online
+						p DSG is a group that belongs to the T.E.I. of Sterea Ellada. The group is led by Prof. Stavros A. Karkanis from the Department of Computer Engineering.
+						p DSG started operating on November 2011, aiming to the development of simple technological & research projects with applicable orientation based on the voluntarily involvement of students from our University.
+						p Main objective of DSG is the promotion of research results in the fields of Computer Vision, Artificial Intelligence and Decision Support Systems all compared with useful applications for every-day life.
+			.row
+				#home-social.text-center
+					a(href="https://github.com/DecisionSystemsGroup", targer="_blank")
+						img(src="#{staticURL}vendor/hand-stitch-round-social-icons-by-design-bolts/png/256x256/github.png", alt="social-github")
+					a(href="https://www.facebook.com/dsg.teiste", targer="_blank")
+						img(src="#{staticURL}vendor/hand-stitch-round-social-icons-by-design-bolts/png/256x256/facebook.png", alt="social-facebook")
+					a(href="https://plus.google.com/u/0/b/106701848379617958990/106701848379617958990", targer="_blank")
+						img(src="#{staticURL}vendor/hand-stitch-round-social-icons-by-design-bolts/png/256x256/google+.png", alt="social-gplus")
+					a(href="https://www.youtube.com/channel/UCb4w_1fp8ef-eka0wJ1--Ow", targer="_blank")
+						img(src="#{staticURL}vendor/hand-stitch-round-social-icons-by-design-bolts/png/256x256/youtube.png", alt="social-youtube")						
+	
+			#home-featured-projects
+				.row
+					h1.title News at DSG
+					#owl-news.owl-carousel.owl-theme
+				.row
+					.col-md-2.col-md-offset-5		
+						a.btn.btn-primary.btn-lg.btn-block(href="#", role="button") More News
+		include ./includes/footer.jade	
+		include ./includes/scripts.jade
+
+
+

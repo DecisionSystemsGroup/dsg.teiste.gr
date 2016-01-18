@@ -1,0 +1,16 @@
+include ./vars.jade
+doctype html
+html
+	include ./includes/head.jade
+	body
+		include ./includes/navbar.jade		
+	if error
+		p ERROR: #{error}
+	else
+		.post
+			.post-title #{post.title}
+			.post-author Written by #{post.author}
+			.post-content !{post.text}
+			.post-created #{createdAt}
+
+		include ./includes/scripts.jade

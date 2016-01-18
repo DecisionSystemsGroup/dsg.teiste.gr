@@ -19,6 +19,7 @@ var middleware = require('./middleware');
  */
 module.exports.createUserSession = function(req, res, user) {
   var cleanUser = {
+    username:  user.username,
     firstName:  user.firstName,
     lastName:   user.lastName,
     email:      user.email,
@@ -40,7 +41,7 @@ module.exports.createUserSession = function(req, res, user) {
  * @returns {Object} - An Express app object.
  */
 module.exports.createApp = function() {
-  mongoose.connect('mongodb://localhost/svcc');
+  mongoose.connect('mongodb://localhost/dsg');
 
   var app = express();
 
@@ -61,7 +62,9 @@ module.exports.createApp = function() {
   // routes
   app.use(require('./routes/auth'));
   app.use(require('./routes/main'));
+  app.use(require('./routes/cms'));
 
+  app.use(express.static('public'));
   return app;
 };
 

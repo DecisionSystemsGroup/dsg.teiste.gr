@@ -11,11 +11,17 @@ router.get('/', function(req, res) {
   res.render('index.jade');
 });
 
+
 /**
  * Render the dashboard page.
  */
 router.get('/dashboard', utils.requireLogin, function(req, res) {
   res.render('dashboard.jade');
+});
+
+
+router.get('/user/:filename', function(req, res) {
+  res.render('user/'+req.params.filename+'.jade');
 });
 
 module.exports = router;

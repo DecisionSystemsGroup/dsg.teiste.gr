@@ -23,6 +23,7 @@ router.post('/register', function(req, res) {
   var hash = bcrypt.hashSync(req.body.password, salt);
 
   var user = new models.User({
+    username:  req.body.username,
     firstName:  req.body.firstName,
     lastName:   req.body.lastName,
     email:      req.body.email,
@@ -57,7 +58,7 @@ router.get('/login', function(req, res) {
  * Once a user is logged in, they will be sent to the dashboard page.
  */
 router.post('/login', function(req, res) {
-  models.User.findOne({ email: req.body.email }, 'firstName lastName email password data', function(err, user) {
+  models.User.findOne({ email: req.body.email }, 'username firstName lastName email password data', function(err, user) {
     if (!user) {
       res.render('login.jade', { error: "Incorrect email / password.", csrfToken: req.csrfToken() });
     } else {

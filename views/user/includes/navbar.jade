@@ -1,0 +1,31 @@
+nav(role="navigation").navbar.navbar-default.navbar-dsg.navbar-fixed-top
+	.container
+		.navbar-header
+			button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle.collapsed
+				span.sr-only
+				| Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+		.collapse.navbar-collapse.navbar-ex1-collapse
+			ul.nav.navbar-nav 
+				li: a(href= "#{logoURL}" ).navbar-brand
+						img(src="#{staticURL}/img/dsg-brand.png" alt="dsg-image")
+				li: a(href="#") Posts
+				li: a(href="#") Projects
+				li: a(href="#") Publications
+				li: a(href="#") Media
+				li: a(href="#") Team		
+			ul.nav.navbar-nav.navbar-right
+				li: a(href="http://r.dsg.teiste.gr/") DSG Repos
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+						| More DSG 
+						span.caret
+					ul.dropdown-menu(role="menu")
+						li: a(href="http://DecisionSystemsGroup.github.io/gitter") Gitter
+						li(role="separator").divider
+						li: a(href="https://github.com/DecisionSystemsGroup") Github Organization
+						li: a(href="https://www.facebook.com/dsg.teiste/") Facebook Page
+						li: a(href="https://plus.google.com/b/106701848379617958990/106701848379617958990/posts") Google+ Page
+						li: a(href="https://www.youtube.com/channel/UCb4w_1fp8ef-eka0wJ1--Ow") Youtube Channel
