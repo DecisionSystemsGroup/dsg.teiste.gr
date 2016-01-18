@@ -2,9 +2,6 @@
 
 This project contains the source code of [dsg.teiste.gr][dsg.url], created by Charis Dimos, John Prantalos and Stavros Tsourlidakis
 
-The talk slides can be found on [SpeakerDeck][].
-
-
 ## Third-party software used
 
 This project is a fork of [svcc-auth][repo.svcc-auth] created by [rdegges][https://github.com/rdegges]
