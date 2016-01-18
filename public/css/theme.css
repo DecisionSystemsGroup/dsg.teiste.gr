@@ -123,6 +123,11 @@ footer #devs{
     font-size: 10px;
 }
 
+footer #teiste{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #104370;
+}
 footer #teiste img{
-    height: 64px;
+    width: 250px;
 }
