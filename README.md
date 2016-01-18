@@ -4,16 +4,16 @@ This project contains the source code of [dsg.teiste.gr][dsg.url], created by Ch
 
 ## Third-party software used
 
-This project is a fork of [svcc-auth][repo.svcc-auth] created by [rdegges][https://github.com/rdegges]
+This project is a fork of [svcc-auth][repo.svcc-auth] created by [rdegges](https://github.com/rdegges)
 
 Other third-party software used:
-* [Twitter Bootstrap 3][http://getbootstrap.com/]
-* [jQuery 2][http://jquery.com/]
-* [NodeJS][https://nodejs.org]
-* [ExpressJS][http://expressjs.com/]
-* [MongoDB][https://www.mongodb.org/]
-* [MongooseJS][http://mongoosejs.com/]
-* [Owl Carousel][http://owlgraphic.com/owlcarousel/]
+* [Twitter Bootstrap 3](http://getbootstrap.com/)
+* [jQuery 2](http://jquery.com/)
+* [NodeJS](https://nodejs.org)
+* [ExpressJS](http://expressjs.com/)
+* [MongoDB](https://www.mongodb.org/)
+* [MongooseJS](http://mongoosejs.com/)
+* [Owl Carousel](http://owlgraphic.com/owlcarousel/)
 
 
 ## License
