@@ -122,3 +122,7 @@ footer{
 footer #devs{
     font-size: 10px;
 }
+
+footer #teiste img{
+    height: 64px;
+}
