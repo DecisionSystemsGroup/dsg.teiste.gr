@@ -1,37 +1,26 @@
-# svcc-auth
+# DSG Online
 
-This project contains code which shows how to implement your own user
-authentication in a Node.js web app with MongoDB.
+This project contains the source code of [dsg.teiste.gr][dsg.url], created by Charis Dimos, John Prantalos and Stavros Tsourlidakis
 
 The talk slides can be found on [SpeakerDeck][].
 
 
-## Installation
+## Third-party software used
 
-Installing this project is simple, run the following commands:
+This project is a fork of [svcc-auth][repo.svcc-auth] created by [rdegges][https://github.com/rdegges]
 
-```console
-$ git clone https://github.com/rdegges/svcc-auth.git
-$ cd svcc-auth
-$ npm install
-$ sudo mongod &  # start mongodb locally
-$ npm start      # fire up the project!
-```
-
-**NOTE**: You must have MongoDB installed and working locally in order to run
-this project.
+Other third-party software used:
+* [Twitter Bootstrap 3][http://getbootstrap.com/]
+* [jQuery 2][http://jquery.com/]
+* [NodeJS][https://nodejs.org]
+* [ExpressJS][http://expressjs.com/]
+* [MongoDB][https://www.mongodb.org/]
+* [MongooseJS][http://mongoosejs.com/]
+* [Owl Carousel][http://owlgraphic.com/owlcarousel/]
 
 
-## Purpose
+## License
+This project is licensed under the MIT License
 
-This project shows how to implement basic user authentication in a Node.js web
-app.  The accompanying talk explains how HTTP authentication works in a group-up
-way for new Node.js (*and web*) developers.
-
-
-## Questions
-
-Got questions?  Hit me up!  I'm r@rdegges.com.
-
-
-  [SpeakerDeck]: https://speakerdeck.com/rdegges/everything-you-ever-wanted-to-know-about-authentication-in-node-dot-js "Everything You Ever Wanted to Know About Authentication in Node.js"
+[dsg.url]: http://dsg.teiste.gr
+[repo.svcc-auth]: https://github.com/rdegges/svcc-auth
