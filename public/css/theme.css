@@ -170,3 +170,30 @@ footer #teiste img{
     font-size: 18px;
     padding: 25px;
 }
+.error .emoji img{
+    width: 100%;
+}
+.error .msg .title{
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+}
+.error .msg .subtitle{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+.error .msg{
+    font-size: 35px;
+    margin-top: 20px;
+}
+.error .msg .msg span{
+    font-weight: bold;
+    display: block;
+    font-size: 32px;
+    margin-top: -10px;
+}
+.error .msg .solution{
+    font-size: 25px;
+    margin-top: 30px;
+}
