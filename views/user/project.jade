@@ -1,0 +1,24 @@
+include ./vars.jade
+doctype html
+html
+	include ./includes/head.jade
+	body
+		include ./includes/navbar.jade
+		.container
+			.row				
+				if error
+					include ./includes/error.jade
+				else
+					.project
+						.head							
+							.info 
+								| Uploaded by 
+								i #{project.author}
+								|  at #{createdAt}
+							.title #{project.title}
+						.team 
+							b Developed by 
+							| !{project.team}
+						.content !{project.text}
+
+		include ./includes/scripts.jade
