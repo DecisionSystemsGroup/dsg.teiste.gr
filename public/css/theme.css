@@ -134,30 +134,30 @@ footer #teiste img{
     width: 250px;
 }
 
-.project{
+.project, .post{
     background-color: #E7E7E7;
     border-radius: 5px;
 }
 
-.project .head{
+.project .head, .post .head{
     font-weight: bold;
     background-color: #333;
     color: #eee;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.project .head .title{    
+.project .head .title, .post .head .title{    
     font-size: 35px;    
     padding: 15px 25px;
 }
-.project .head .info{
+.project .head .info, .post .head .info{
     font-size: 10px;
     color: #ccc;
     text-align: right;
     padding: 5px;
     margin-bottom: -30px;
 }
-.project .team{
+.project .team, .post .author{
     font-size: 20px;
     text-align: right;
     float: right;
@@ -165,9 +165,14 @@ footer #teiste img{
     color: #eee;
     padding: 10px;
     border-bottom-left-radius: 5px;
+}
+.project .team{    
     width: 800px;
 }
-.project .content{
+.post .author{
+    width: 300px;
+}
+.project .content, .post .content{
     clear: both;
     font-size: 18px;
     padding: 25px;

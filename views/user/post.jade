@@ -3,14 +3,20 @@ doctype html
 html
 	include ./includes/head.jade
 	body
-		include ./includes/navbar.jade		
-	if error
-		p ERROR: #{error}
-	else
-		.post
-			.post-title #{post.title}
-			.post-author Written by #{post.author}
-			.post-content !{post.text}
-			.post-created #{createdAt}
+		include ./includes/navbar.jade
+		.container
+			.row				
+				if error
+					include ./includes/error.jade
+				else
+					.post
+						.head							
+							.info Created at #{createdAt}
+							.title #{post.title}
+						.author 
+							b Written by 
+							| #{post.author}
+						.content !{post.text}
 
+		include ./includes/footer.jade				
 		include ./includes/scripts.jade
