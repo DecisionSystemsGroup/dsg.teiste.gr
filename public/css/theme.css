@@ -117,7 +117,9 @@ iframe{
 
 footer{
     font-size: 16px;
-    padding-top: 25px;
+    margin-top: 50px;
+    padding-top: 10px;
+    background-color: #E4E4E4;
 }
 footer #devs{
     font-size: 10px;
