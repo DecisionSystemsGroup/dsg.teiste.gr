@@ -10,10 +10,14 @@ body{
 	color: #333;
     padding-top: 70px;
     position: relative;
-    font-family: 'Play', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 iframe{
 	border: 0px;
+}
+.login-row{
+    margin-top: 70px;
+    margin-bottom: 150px;
 }
 .navbar{
 	border-radius: 0px;
@@ -55,6 +59,54 @@ iframe{
     outline: 0px none;
 }
 .navbar-dsg .navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.navbar-dsg-dashboard{
+    background-color: #404040;
+    color: #eee;
+}
+.navbar-dsg-dashboard .navbar-brand:focus, .navbar-dsg-dashboard .navbar-brand:hover {
+    color: #333;
+    background-color: transparent;
+}
+.navbar-dsg-dashboard .navbar-brand {
+    color: #eee;
+}
+.navbar-dsg-dashboard .navbar-brand img{
+    height: 32px;
+    margin-top: -5px;
+}
+.navbar-dsg-dashboard .navbar-nav > .active > a, .navbar-dsg-dashboard .navbar-nav > .active > a:focus, .navbar-dsg-dashboard .navbar-nav > .active > a:hover {
+    color: #FFF;
+    background-color: #1C1C1C;
+}
+.navbar-dsg-dashboard .navbar-nav > li > a {
+    color: #eee;
+}
+.navbar-dsg-dashboard .navbar-nav > li > a:focus, .navbar-dsg-dashboard .navbar-nav > li > a:hover {
+    color: #FFF;
+    background-color: #1C1C1C;
+ }
+.navbar-dsg-dashboard .navbar-nav > .open > a, .navbar-dsg-dashboard .navbar-nav > .open > a:focus, .navbar-dsg-dashboard .navbar-nav > .open > a:hover {
+    color: #FFF;
+    background-color: #1C1C1C;
+ }
+ .navbar-dsg-dashboard .dropdown-menu > .active > a, .navbar-dsg-dashboard .dropdown-menu > .active > a:focus, .navbar-dsg-dashboard .dropdown-menu > .active > a:hover {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #1C1C1C;
+    outline: 0px none;
+}
+.navbar-dsg-dashboard .navbar-toggle {
     position: relative;
     float: right;
     padding: 9px 10px;
@@ -133,7 +185,18 @@ footer #teiste{
 footer #teiste img{
     width: 250px;
 }
-
+.page .title{
+    margin-top: 15px;
+    font-size: 45px;
+    font-weight: 800;
+}
+.page .motd{
+    font-size: 25px;
+    margin-top: 15px;
+}
+.page .motd span{
+    font-weight: 700;
+}
 .project, .post{
     background-color: #E7E7E7;
     border-radius: 5px;
@@ -150,7 +213,7 @@ footer #teiste img{
     font-size: 35px;    
     padding: 15px 25px;
 }
-.project .head .info, .post .head .info{
+.project .head .info, .post .head .info, .page .info{
     font-size: 10px;
     color: #ccc;
     text-align: right;
