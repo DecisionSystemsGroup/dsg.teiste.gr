@@ -1,26 +1,31 @@
-extends base
+extends ./layouts/default.jade
 
-block vars
-  - var title = 'New Post'
+block head
+  title Νέο Άρθρο | Περιοχή Διαχείρισης - #{pageDesc}
 
-block body
-  h1 New Post
+block content
+  .container
+    .row.first-row
+      .page
+        .title Νέο Άρθρο
 
-  if error
-    p ERROR: #{error}
+        if error
+          p ERROR: #{error}
 
-  form(method="post")
-    input(type="hidden", name="_csrf", value=csrfToken)
+        form(method="post")
 
-    span title:
-    input(type="text", name="title", required=true)
-    br
+            input(type="hidden", name="_csrf", value=csrfToken)
 
-    span url:
-    input(type="text", name="name", required=true)
-    br
+            .form-group
+              label(for="title") Τίτλος Project
+              input(class="form-control", type="text", id="title", name="title", required=true)
+            
+            .form-group
+              label(for="url") URL:
+              input(class="form-control", type="text", id="url", name="url", required=true)
 
-    span text:
-    input(type="text", name="text", required=true)
-    br
-    input(type="submit")
+            .form-group
+              label(for="text") Text:
+              textarea(class="form-control", rows="5", required=true)
+
+            input(type="submit", class="btn btn-success btn-lg", value="Δημιουργία")
