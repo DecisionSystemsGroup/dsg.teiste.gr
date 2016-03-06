@@ -1,19 +1,22 @@
-extends base
+extends ./dashboard/layouts/default.jade
 
-block vars
-  - var title = 'Dashboard'
+block head
+  title Περιοχή Διαχείρισης - #{pageDesc}
 
-block body
-  h1 Dashboard
-  p.
-    Welcome to your dashboard! You are now logged in.
+block content
+  .container
+    .row.first-row
+      .page
+        .title Περιοχή Διαχείρισης
+        .motd Γεία σου 
+          span #{user.firstName}
+          ! Αυτή είναι η περιοχή διαχείρισης του DSG Online.
+        .motd
+          Από εδώ μπορείς να δημιουργήσεις <a href="/dashboard/post">Νέο Άρθρο</a>, <a href="/dashboard/project">Νέο Project</a> και να επεξεργαστείς υπάρχοντα <a href="#">Άρθρα</a>, <a href="#">Projects</a> και <a href="#">Χρήστες</a>
 
-  h2 User Information
-  p Username: #{user.username}
-  p First Name: #{user.firstName}
-  p Last Name:  #{user.lastName}
-  p Email:      #{user.email}
-  p Data:       #{user.data}
-  
-  br
-  h1 <a href="/dashboard/post">New Post</a>
+        h2 Dev Info
+        p Username: #{user.username}
+        p First Name: #{user.firstName}
+        p Last Name:  #{user.lastName}
+        p Email:      #{user.email}
+        p Data:       #{user.data}
