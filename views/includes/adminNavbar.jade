@@ -1,0 +1,29 @@
+nav(role="navigation").navbar.navbar-default.navbar-dsg-dashboard.navbar-fixed-top
+	.container
+		.navbar-header
+			button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle.collapsed
+				span.sr-only
+				| Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+		.collapse.navbar-collapse.navbar-ex1-collapse
+			ul.nav.navbar-nav 
+				li: a(href= "#{staticURL}dashboard" ).navbar-brand
+						img(src="#{staticURL}img/dsg-brand.png" alt="dsg-image")
+
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+						| Άρθρα 
+						span.caret
+					ul.dropdown-menu(role="menu")
+						li: a(href="#") Επεξεργασία Άρθρου
+						li: a(href="#{staticURL}dashboard/post") Νέο Άρθρο
+
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+						| Projects 
+						span.caret
+					ul.dropdown-menu(role="menu")
+						li: a(href="#") Επεξεργασία Project
+						li: a(href="#{staticURL}dashboard/project") Νέο Project
