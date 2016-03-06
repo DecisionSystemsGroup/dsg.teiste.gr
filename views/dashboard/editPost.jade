@@ -1,0 +1,32 @@
+extends ./layouts/default.jade
+
+block head
+  title Επεξεργασία Άρθρου: #{post.title} | Περιοχή Διαχείρισης - #{pageDesc}
+
+block content
+  .container
+    .row.first-row
+      .page
+        .title Επεξεργασία του #{post.title}
+
+        if error
+              p ERROR: #{error}
+
+            form(method="post")
+
+              input(type="hidden", name="_csrf", value=csrfToken)
+
+              .form-group
+                label(for="title") Τίτλος Άρθρου
+                input(class="form-control", type="text", id="title", name="title", placeholder="Τίτλος Άρθρου" value="#{post.title}" required=true)
+
+              .form-group
+                label(for="url") URL
+                input(class="form-control", type="text", id="title", name="title", placeholder="URL Άρθρου" value="#{post.name}" required=true)
+
+              .form-group
+                label(for="text") Text:
+                textarea(class="form-control", rows="5", required=true)
+                  | #{post.text}
+
+              input(type="submit", class="btn btn-success btn-lg", value="Ενημέρωση")

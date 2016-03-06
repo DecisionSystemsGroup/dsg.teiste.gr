@@ -1,0 +1,15 @@
+extends ./layouts/default.jade
+
+block head
+  title Όλα τα Άρθρα | Περιοχή Διαχείρισης - #{pageDesc}
+
+block content
+  .container
+    .row.first-row
+      .page
+        .title Όλα τα Άρθρα
+
+        table
+          each post in posts 
+            | Τιτλος: #{post.title}, Δημιουργός: #{post.author}, URL: #{post.name}
+            br
