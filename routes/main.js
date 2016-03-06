@@ -8,7 +8,7 @@ var router = express.Router();
  * Render the home page.
  */
 router.get('/', function(req, res) {
-  res.render('index.jade');
+  res.render('user/index.jade');
 });
 
 
