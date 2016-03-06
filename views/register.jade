@@ -1,35 +1,38 @@
-extends base
+include ./vars.jade
+doctype html
+html
+  head
+    include ./includes/head.jade
+    title Εγγραφή | Περιοχή Διαχείρισης - #{pageDesc}
+  body
+    .container
+      .row.register-row
+        .col-md-6.col-md-offset-3
+          .page
+            .title.text-center Εγγραφή στη Περιοχή Διαχείρισης
 
-block vars
-  - var title = 'Register'
+            if error
+              p ERROR: #{error}
 
-block body
-  h1 Create an Account
+            form(method="post")
+                input(type="hidden", name="_csrf", value=csrfToken)
 
-  if error
-    p ERROR: #{error}
+                .form-group
+                    input(class="form-control", type="text", id="username", name="username", placeholder="Εισαγωγή Username" required=true)
 
-  form(method="post")
-    input(type="hidden", name="_csrf", value=csrfToken)
+                .form-group
+                    input(class="form-control", type="text", id="firstname", name="firstname", placeholder="Εισαγωγή Ονόματος" required=true)
 
-    span Username:
-    input(type="text", name="username", required=true)
-    br
+                .form-group
+                    input(class="form-control", type="text", id="lastname", name="lastname", placeholder="Εισαγωγή Επωνύμου" required=true)
 
-    span First Name:
-    input(type="text", name="firstName", required=true)
-    br
+                .form-group
+                    input(class="form-control", type="email", id="e-mail", name="e-mail", placeholder="Εισαγωγή E-mail" required=true)
+              
+                .form-group
+                    input(class="form-control", type="password", id="password", name="password", placeholder="Εισαγωγή Password" required=true)
 
-    span Last Name:
-    input(type="text", name="lastName", required=true)
-    br
+                input(type="submit", class="btn btn-warning btn-lg", value="Εγγραφή")          
 
-    span Email:
-    input(type="email", name="email", required=true)
-    br
-
-    span Password:
-    input(type="password", name="password", required=true)
-    br
-
-    input(type="submit")
+    include ./includes/footer.jade  
+    include ./includes/scripts.jade
