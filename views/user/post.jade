@@ -1,22 +1,19 @@
-include ./vars.jade
-doctype html
-html
-	include ./includes/head.jade
-	body
-		include ./includes/navbar.jade
-		.container
-			.row				
-				if error
-					include ./includes/error.jade
-				else
-					.post
-						.head							
-							.info Created at #{createdAt}
-							.title #{post.title}
-						.author 
-							b Written by 
-							| #{post.author}
-						.content !{post.text}
+extends ./layouts/default.jade
 
-		include ./includes/footer.jade				
-		include ./includes/scripts.jade
+block head
+	title  #{pageDesc}
+	
+block content
+	.container
+		.row				
+			if error
+				include ../includes/error.jade
+			else
+				.post
+					.head							
+						.info Created at #{createdAt}
+						.title #{post.title}
+					.author 
+						b Written by 
+						| #{post.author}
+					.content !{post.text}
