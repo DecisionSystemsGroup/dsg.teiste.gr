@@ -1,23 +1,31 @@
-extends base
+include ./vars.jade
+doctype html
+html
+  head
+    include ./includes/head.jade
+    title Σύνδεση | Περιοχή Διαχείρισης - #{pageDesc}
+  body
+    .container
+      .row.login-row
+        .col-md-6.col-md-offset-3
+          .page
+            .title.text-center Σύνδεση στη Περιοχή Διαχείρισης
 
-block vars
-  - var title = 'Login'
+            if error
+              p ERROR: #{error}
 
-block body
-  h1 Log Into Your Account
+            form(method="post")
 
-  if error
-    p ERROR: #{error}
+              input(type="hidden", name="_csrf", value=csrfToken)
 
-  form(method="post")
-    input(type="hidden", name="_csrf", value=csrfToken)
+              .form-group
+                input(class="form-control", type="email", id="email", name="email", placeholder="Εισαγωγή E-mail" required=true)
+              
+              .form-group
+                input(class="form-control", type="password", id="password", name="password", placeholder="Εισαγωγή Password" required=true)
 
-    span Email:
-    input(type="email", name="email", required=true)
-    br
+              input(type="submit", class="btn btn-success btn-lg", value="Σύνδεση")          
 
-    span Password:
-    input(type="password", name="password", required=true)
-    br
+    include ./includes/footer.jade  
+    include ./includes/scripts.jade
 
-    input(type="submit")
