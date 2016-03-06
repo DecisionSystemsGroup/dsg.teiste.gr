@@ -1,0 +1,35 @@
+extends ./layouts/default.jade
+
+block head
+  title Νέο Project | Περιοχή Διαχείρισης - #{pageDesc}
+
+block content
+  .container
+    .row.first-row
+      .page
+        .title Νέο Project
+
+        if error
+          p ERROR: #{error}
+
+        form(method="post")
+
+            input(type="hidden", name="_csrf", value=csrfToken)
+
+            .form-group
+              label(for="title") Τίτλος Project
+              input(class="form-control", type="text", id="title", name="title", required=true)
+            
+            .form-group
+              label(for="url") URL:
+              input(class="form-control", type="text", id="url", name="url", required=true)
+
+            .form-group
+              label(for="team") Team(csv):
+              input(class="form-control", type="text", id="team", name="team", required=true)
+
+            .form-group
+              label(for="text") Text:
+              textarea(class="form-control", rows="5", required=true)
+
+            input(type="submit", class="btn btn-success btn-lg", value="Δημιουργία")
