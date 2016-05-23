@@ -33,7 +33,7 @@ router.post('/dashboard/post', utils.requireLogin, function(req, res) {
 router.get('/post/:name', function(req, res) {
   models.Post.findOne({name: req.params.name}, '_id title author text', function(err, post) {
     if (!post) {
-      res.render('user/post.jade', { error: "There is no postwith that name.", solution: error404  });
+      res.render('user/post.jade', { error: "there is no post name with that name.", solution: error404  });
     } else {
 		var createdAt = post._id.getTimestamp();
 		res.render('user/post.jade', { post: post, createdAt: createdAt });
@@ -41,7 +41,7 @@ router.get('/post/:name', function(req, res) {
   });
 });
 
-//returns all the posts available for editing
+//returns all the posts 
 router.get('/dashboard/posts', utils.requireLogin, function(req, res) {
   models.Post.find({}, '_id title author name', function(err, posts) {
     if (!posts) {
@@ -63,7 +63,6 @@ router.get('/dashboard/post/:name', utils.requireLogin, function(req, res) {
     }
   });
 });
-//update a post
 router.post('/dashboard/post/:name', utils.requireLogin, function(req, res) {
 	var editedPost = {
 		title:  req.body.title,

@@ -19,7 +19,7 @@ var middleware = require('./middleware');
  */
 module.exports.createUserSession = function(req, res, user) {
   var cleanUser = {
-    username:  user.username,
+    username:	user.username,
     firstName:  user.firstName,
     lastName:   user.lastName,
     email:      user.email,
