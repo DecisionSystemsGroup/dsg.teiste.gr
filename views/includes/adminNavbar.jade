@@ -3,7 +3,7 @@ nav(role="navigation").navbar.navbar-default.navbar-dsg-dashboard.navbar-fixed-t
 		.navbar-header
 			button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle.collapsed
 				span.sr-only
-				| Toggle navigation
+					| Toggle navigation
 				span.icon-bar
 				span.icon-bar
 				span.icon-bar
@@ -14,16 +14,21 @@ nav(role="navigation").navbar.navbar-default.navbar-dsg-dashboard.navbar-fixed-t
 
 				li.dropdown
 					a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
-						| Άρθρα 
+						| Προβολή
 						span.caret
 					ul.dropdown-menu(role="menu")
-						li: a(href="#") Επεξεργασία Άρθρου
-						li: a(href="#{staticURL}dashboard/post") Νέο Άρθρο
+						li: a(href="#{staticURL}dashboard/users") Χρηστών
+						li: a(href="#{staticURL}dashboard/posts") Άρθρων
+						li: a(href="#{staticURL}dashboard/projects") Project
+						li: a(href="#{staticURL}dashboard/publications") Δημοσιεύσεων
 
 				li.dropdown
 					a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
-						| Projects 
+						| Δημιουργία
 						span.caret
 					ul.dropdown-menu(role="menu")
-						li: a(href="#") Επεξεργασία Project
-						li: a(href="#{staticURL}dashboard/project") Νέο Project
+						li: a(href="#{staticURL}dashboard/user") Χρήστη
+						li: a(href="#{staticURL}dashboard/post") Άρθρου
+						li: a(href="#{staticURL}dashboard/project") Project
+						li: a(href="#{staticURL}dashboard/publication") Δημοσίευσης
+				li: a(href= "#{staticURL}") View Site
