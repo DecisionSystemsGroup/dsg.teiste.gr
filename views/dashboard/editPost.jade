@@ -2,31 +2,65 @@ extends ./layouts/default.jade
 
 block head
   title Επεξεργασία Άρθρου: #{post.title} | Περιοχή Διαχείρισης - #{pageDesc}
+  link(rel="stylesheet", type="text/css", href="#{staticURL}vendor/jquery-tags-input/src/jquery.tagsinput.css")   
+  script(type="text/javascript" src="#{staticURL}vendor/tinymce/js/tinymce/tinymce.min.js")
 
 block content
   .container
     .row.first-row
       .page
-        .title Επεξεργασία του #{post.title}
+        .title Επεξεργασία του <i>"#{post.title}"</i>
 
         if error
-              p ERROR: #{error}
-
-            form(method="post")
-
-              input(type="hidden", name="_csrf", value=csrfToken)
-
+          p ERROR: #{error}
+        form(method="post")
+          input(type="hidden", name="_csrf", value=csrfToken)
+          .row
+            .col-md-6
+              img.img-responsive(src="#{post.thumb}", alt="thumb")
+            .col-md-6
               .form-group
                 label(for="title") Τίτλος Άρθρου
-                input(class="form-control", type="text", id="title", name="title", placeholder="Τίτλος Άρθρου" value="#{post.title}" required=true)
-
+                input(class="form-control", type="text", id="title", name="title", value="#{post.title}", required)
               .form-group
-                label(for="url") URL
-                input(class="form-control", type="text", id="title", name="title", placeholder="URL Άρθρου" value="#{post.name}" required=true)
-
+                label(for="name") URL:
+                input(class="form-control", type="text", id="name", name="name", value="#{post.name}", required)            
               .form-group
-                label(for="text") Text:
-                textarea(class="form-control", rows="5", required=true)
-                  | #{post.text}
-
-              input(type="submit", class="btn btn-success btn-lg", value="Ενημέρωση")
+                label(for="thumb") Thumb URI:
+                input(class="form-control", type="text", id="thumb", name="thumb", value="#{post.thumb}", required)
+              .row
+                .form-group.col-md-4
+                  label(for="post-lang") Γλώσσα Εμφάνισης:
+                  select.form-control(id="post-lang", name="post-lang")
+                    option Ελληνικά
+                    option English
+                .form-group.col-md-8
+                  label(for="description") SEO Περιγραφή:
+                  input(class="form-control", type="text", id="description", name="description")
+                .form-group
+                  label(for="post-tags") SEO tags
+                  input(class="form-control", type="text", id="post-tags", name="post-tags", value="dsg, teiste") 
+          .form-group
+            label(for="text") Κείμενο:
+            textarea(class="form-control", rows="5", id="text", name="text")
+              | #{post.text}
+          .row
+            .col-md-3
+              input(type="submit", class="btn btn-success btn-lg btn-block", value="Ενημέρωση")
+            .col-md-3
+              a(href="#{staticURL}dashboard/post/#{post.name}/delete" role="button" class="btn btn-danger btn-lg btn-block") Διαγραφή    
+block scripts
+  script(type="text/javascript" src="#{staticURL}vendor/jquery-tags-input/src/jquery.tagsinput.js")
+  script(type='text/javascript').
+    $('#post-tags').tagsInput();
+    tinymce.init({ 
+      selector:'textarea', 
+      menu: {},
+      height : 500, 
+      plugins: 'code table image imagetools', 
+      toolbar1: 'undo redo |  cut copy paste pastetext | code removeformat',
+      toolbar2: 'styleselect bold italic alignleft aligncenter alignright bullist numlist outdent indent | table | image insert',
+      image_caption: true,
+      image_dimensions: true,
+      image_title: true
+    });
