@@ -10,10 +10,13 @@ block content
 				include ../includes/error.jade
 			else
 				.post
-					.head							
+					.head(style="background-image:url(#{post.thumb})")
 						.info Created at #{createdAt}
 						.title #{post.title}
-					.author 
-						b Written by 
-						| #{post.author}
+						.author 
+							b Written by 
+							| #{post.author}
 					.content !{post.text}
+					.comments.col-md-10.col-md-offset-1
+						h1 Comments
+						include ../includes/disqus.jade	

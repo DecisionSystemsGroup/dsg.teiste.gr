@@ -207,19 +207,54 @@ footer #teiste img{
     background-color: #E7E7E7;
     border-radius: 5px;
 }
-
-.project .head, .post .head{
+.post .head{
+    width: 100%;
+    min-height: 500px;
+    background-color: #333;
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.post .head .title{
+    background-color: rgba(30,30,30,0.8);
+    color: #ddd;
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 370px;
+}
+.post .head .info{
+    background-color: rgba(30,30,30,0.8);
+    color: #ddd;
+    width: 250px;
+    text-align: center;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.post .head .author{
+    font-size: 20px;
+    text-align: right;
+    float: right;
+    background-color: #024377;
+    color: #eee;
+    padding: 10px;
+    border-top-left-radius: 6px;
+    margin-top: -49px;
+}
+.project .head{
     font-weight: bold;
     background-color: #333;
     color: #eee;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.project .head .title, .post .head .title{    
+.project .head .title{    
     font-size: 35px;    
     padding: 15px 25px;
 }
-.project .head .info, .post .head .info, .page .info{
+.project .head .info, .page .info{
     font-size: 10px;
     color: #ccc;
     text-align: right;

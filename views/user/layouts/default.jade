@@ -1,9 +1,12 @@
 include ../../vars.jade
 doctype html
 html
-	include ../../includes/head.jade
+	head
+		include ../../includes/head.jade
+		block head
 	body
-		include ../../includes/navbar.jade
+		include ../../includes/adminNavbar.jade
 		block content
 		include ../../includes/footer.jade	
 		include ../../includes/scripts.jade
+		block scripts
