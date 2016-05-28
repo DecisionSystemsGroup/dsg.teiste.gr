@@ -13,33 +13,33 @@ block content
 				if error
 					p ERROR: #{error}
 				form(method="post")
-				input(type="hidden", name="_csrf", value=csrfToken)
-				.form-group
-					label(for="title") Τίτλος Project
-					input(class="form-control", type="text", id="title", name="title", required)            
-				.row
-					.form-group.col-md-6
-						label(for="name") URL:
-						input(class="form-control", type="text", id="name", name="name", required)            
-					.form-group.col-md-6
-						label(for="thumb") Thumb URI:
-						input(class="form-control", type="text", id="thumb", name="thumb", required)
-				.row
-					.form-group.col-md-2
-						label(for="post-lang") Γλώσσα Εμφάνισης:
-						select.form-control(id="post-lang", name="post-lang")
-							option Ελληνικά
-							option English
-					.form-group.col-md-10
-						label(for="description") SEO Περιγραφή:
-						input(class="form-control", type="text", id="description", name="description")
-				.form-group
-					label(for="post-tags") SEO tags
-					input(class="form-control", type="text", id="post-tags", name="post-tags", value="dsg, teiste") 
-				.form-group
-					label(for="text") Κείμενο:
-					textarea(class="form-control", rows="5", id="text", name="text")
-				input(type="submit", class="btn btn-success btn-lg", value="Δημιουργία", required)
+					input(type="hidden", name="_csrf", value=csrfToken)
+					.form-group
+						label(for="title") Τίτλος Άρθρου
+						input(class="form-control", type="text", id="title", name="title", required)            
+					.row
+						.form-group.col-md-6
+							label(for="name") URL:
+							input(class="form-control", type="text", id="name", name="name", required)            
+						.form-group.col-md-6
+							label(for="thumb") Thumb URI:
+							input(class="form-control", type="text", id="thumb", name="thumb", required)
+					.row
+						.form-group.col-md-2
+							label(for="post-lang") Γλώσσα Εμφάνισης:
+							select.form-control(id="post-lang", name="post-lang")
+								option Ελληνικά
+								option English
+						.form-group.col-md-10
+							label(for="description") SEO Περιγραφή:
+							input(class="form-control", type="text", id="description", name="description")
+					.form-group
+						label(for="post-tags") SEO tags
+						input(class="form-control", type="text", id="post-tags", name="post-tags", value="dsg, teiste") 
+					.form-group
+						label(for="text") Κείμενο:
+						textarea(class="form-control", rows="5", id="text", name="text")
+					input(type="submit", class="btn btn-success btn-lg", value="Δημιουργία", required)
 block scripts
 	script(type="text/javascript" src="#{staticURL}vendor/jquery-tags-input/src/jquery.tagsinput.js")
 	script(type='text/javascript').
