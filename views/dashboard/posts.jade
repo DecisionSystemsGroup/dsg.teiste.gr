@@ -1,15 +1,32 @@
 extends ./layouts/default.jade
 
 block head
-  title Όλα τα Άρθρα | Περιοχή Διαχείρισης - #{pageDesc}
+	title Όλα τα Άρθρα | Περιοχή Διαχείρισης - #{pageDesc}
 
 block content
-  .container
-    .row.first-row
-      .page
-        .title Όλα τα Άρθρα
-
-        table
-          each post in posts 
-            | Τιτλος: #{post.title}, Δημιουργός: #{post.author}, URL: #{post.name}
-            br
+	.container
+		.row.first-row
+			.page
+				.title Όλα τα Άρθρα
+				.col-md-8			
+					table.table.table-striped
+						thead
+							tr							
+								th.text-center Ημ/νια Δημιουργίας
+								th.text-center Τίτλος
+								th.text-center Δημιουργός
+								th.text-center Διαχείριση
+						tbody
+							each post in posts 
+								tr								
+								td #{post.createdAt}
+								td #{post.title}
+								td #{post.author}
+								td.row
+									span.col-md-6
+										a(href="#{staticURL}dashboard/post/#{post.name}/edit" role="button" class="btn btn-primary btn-block")
+											i.fa.fa-edit.fa-lg
+									span.col-md-6
+										a(href="#{staticURL}dashboard/post/#{post.name}/delete" role="button" class="btn btn-danger btn-block")
+											i.fa.fa-trash-o.fa-lg
+								
