@@ -7,16 +7,36 @@ block content
   .container
     .row.first-row
       .page
-        .title Περιοχή Διαχείρισης
-        .motd Γεία σου 
-          span #{user.firstName}
-          ! Αυτή είναι η περιοχή διαχείρισης του DSG Online.
-        .motd
-          Από εδώ μπορείς να δημιουργήσεις <a href="/dashboard/post">Νέο Άρθρο</a>, <a href="/dashboard/project">Νέο Project</a> και να επεξεργαστείς υπάρχοντα <a href="#">Άρθρα</a>, <a href="#">Projects</a> και <a href="#">Χρήστες</a>
-
-        h2 Dev Info
-        p Username: #{user.username}
-        p First Name: #{user.firstName}
-        p Last Name:  #{user.lastName}
-        p Email:      #{user.email}
-        p Data:       #{user.data}
+        .title.col-md-6 Περιοχή Διαχείρισης
+        .col-md-6
+          .motd Γεία σου 
+            span #{user.firstName}!
+          .row    
+            .col-md-4
+              a(href="#" class="btn btn-primary btn-sm btn-block") Ρυθμίσεις
+            .col-md-4
+              a(href="#" class="btn btn-danger btn-sm btn-block") Αποσύνδεση
+    .row
+      .col-md-3
+        img.dash-thumb(src="#{staticURL}img/users.png", alt="users")
+        a(href="#{staticURL}dashboard/users" class="btn btn-primary btn-lg btn-block") Λίστα Χρηστών
+        a(href="#{staticURL}dashboard/user" class="btn btn-success btn-lg btn-block") Νέος Χρήστης
+      .col-md-3
+        img.dash-thumb(src="#{staticURL}img/posts.png", alt="posts")
+        a(href="#{staticURL}dashboard/posts" class="btn btn-primary btn-lg btn-block") Λίστα Άρθρων        
+        a(href="#{staticURL}dashboard/post" class="btn btn-success btn-lg btn-block") Νέο Άρθρο
+      .col-md-3
+        img.dash-thumb(src="#{staticURL}img/projects.png", alt="projects")
+        a(href="#{staticURL}dashboard/projects" class="btn btn-primary btn-lg btn-block") Λίστα Project        
+        a(href="#{staticURL}dashboard/project" class="btn btn-success btn-lg btn-block") Νέο Project
+      .col-md-3
+        img.dash-thumb(src="#{staticURL}img/publications.png", alt="publications")
+        a(href="#{staticURL}dashboard/publications" class="btn btn-primary btn-lg btn-block") Λίστα Δημοσιεύσεων        
+        a(href="#{staticURL}dashboard/publication" class="btn btn-success btn-lg btn-block") Νέα Δημοσίευση         
+    .row    
+      h2 Dev Info
+      p Username: #{user.username}
+      p First Name: #{user.firstName}
+      p Last Name:  #{user.lastName}
+      p Email:      #{user.email}
+      p Data:       #{user.data}
